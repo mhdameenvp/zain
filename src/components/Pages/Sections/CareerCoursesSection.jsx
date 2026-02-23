@@ -5,32 +5,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import img1 from "../../../assets/images/program-1.jpg";
-import img2 from "../../../assets/images/program-2.jpg";
-import img3 from "../../../assets/images/program-3.jpg";
-import img4 from "../../../assets/images/hero-bg.jpg";
-import img5 from "../../../assets/images/cta.jpg";
-
 const courses = [
   {
     title: "Engineering & Technology",
-    image: img1,
+    image: "/images/program-1.jpg",
   },
   {
     title: "Aviation Technology",
-    image: img2,
+    image: "/images/program-2.jpg",
   },
   {
     title: "Bio Medical Engineering",
-    image: img3,
+    image: "/images/program-3.jpg",
   },
   {
     title: "Medical & Paramedical",
-    image: img4,
+    image: "/images/hero-bg.jpg",
   },
   {
     title: "Business Management",
-    image: img5,
+    image: "/images/cta.jpg",
   },
 ];
 
@@ -47,7 +41,7 @@ const CareerCoursesSection = () => {
           Career Pathway Courses
         </h2>
 
-        {/* CUSTOM SMALL AESTHETIC ARROWS */}
+        {/* LEFT ARROW */}
         <button
           ref={prevRef}
           className="absolute left-0 sm:-left-2 md:-left-4 top-1/2 -translate-y-1/2 z-10 
@@ -61,6 +55,7 @@ const CareerCoursesSection = () => {
           ‹
         </button>
 
+        {/* RIGHT ARROW */}
         <button
           ref={nextRef}
           className="absolute right-0 sm:-right-2 md:-right-4 top-1/2 -translate-y-1/2 z-10 
@@ -85,12 +80,12 @@ const CareerCoursesSection = () => {
             swiper.params.navigation.nextEl = nextRef.current;
           }}
           breakpoints={{
-            0: { slidesPerView: 1.1 },   // Mobile
-            480: { slidesPerView: 1.3 }, // Large phones
-            640: { slidesPerView: 2 },   // Tablet
-            768: { slidesPerView: 2.5 }, // iPad
-            1024: { slidesPerView: 3 },  // Laptop
-            1280: { slidesPerView: 4 },  // Desktop
+            0: { slidesPerView: 1.1 },
+            480: { slidesPerView: 1.3 },
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 2.5 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
           }}
         >
           {courses.map((course, index) => (

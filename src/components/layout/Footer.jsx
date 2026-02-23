@@ -1,4 +1,14 @@
-import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
+
+const logo = "/images/zain.png";
 
 const Footer = () => {
   return (
@@ -12,11 +22,13 @@ const Footer = () => {
           
           {/* ===== LOGO + ABOUT ===== */}
           <div>
-            {/* Dummy Logo (Replace Later) */}
+            {/* REAL LOGO (DEPLOYMENT SAFE) */}
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center font-bold text-xl">
-                Z
-              </div>
+              <img
+                src={logo}
+                alt="Zain Education Logo"
+                className="h-12 w-auto object-contain"
+              />
               <div>
                 <h2 className="text-xl font-semibold tracking-wide">
                   Zain
@@ -28,8 +40,8 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
-              Guiding students towards successful careers since 2013. 
-              Your trusted partner in educational counseling and 
+              Guiding students towards successful careers since 2013.
+              Your trusted partner in educational counseling and
               career development services.
             </p>
 

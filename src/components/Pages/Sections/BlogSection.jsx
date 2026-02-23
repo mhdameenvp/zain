@@ -1,28 +1,25 @@
-import blog1 from "../../../assets/images/program-1.jpg";
-import blog2 from "../../../assets/images/civil.jpg";
-import blog3 from "../../../assets/images/program-3.jpg";
-import userImg from "../../../assets/images/patel.jpg";
-
 const blogs = [
   {
     title: "Business Management",
     date: "20-December-2025",
     desc: "Business management programs develop leadership, strategic thinking, and decision-making skills essential for success in today's competitive business world.",
-    image: blog1,
+    image: "/images/program-1.jpg",
   },
   {
     title: "Civil Engineering",
     date: "20-December-2025",
     desc: "Civil engineering focuses on designing, constructing, and maintaining infrastructure that supports modern society and sustainable development.",
-    image: blog2,
+    image: "/images/civil.jpg",
   },
   {
     title: "Bsc microbiology",
     date: "20-December-2025",
     desc: "Microbiology focuses on the study of microorganisms and their vital role in healthcare, research, biotechnology, and environmental science.",
-    image: blog3,
+    image: "/images/program-3.jpg",
   },
 ];
+
+const userImg = "/images/patel.jpg";
 
 const BlogSection = () => {
   return (

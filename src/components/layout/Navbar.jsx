@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../../assets/images/zain-logo.png";
 import { Mail, MapPin, Search, LogIn, Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -9,7 +8,6 @@ const Navbar = () => {
     <header className="w-full fixed top-0 left-0 z-50 bg-white shadow-sm">
       
       {/* ================= TOP INFO BAR ================= */}
-      {/* Hidden on mobile, visible on tablet & laptop */}
       <div className="hidden sm:block w-full bg-gray-100 border-b">
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-2 flex items-center justify-between text-sm text-gray-600">
           
@@ -28,8 +26,8 @@ const Navbar = () => {
             </p>
           </div>
 
-          {/* Right Side Login Button */}
-          <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 lg:px-5 py-1.5 rounded-full text-xs lg:text-sm font-semibold shadow-md hover:shadow-lg hover:from-blue-700 hover:to-blue-800 transform hover:-translate-y-0.5 transition-all duration-300">
+          {/* Login Button */}
+          <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 lg:px-5 py-1.5 rounded-full text-xs lg:text-sm font-semibold shadow-md hover:shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
             <LogIn size={16} />
             Login
           </button>
@@ -40,16 +38,17 @@ const Navbar = () => {
       <div className="w-full bg-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-3 lg:py-4 flex items-center justify-between">
           
-          {/* LOGO */}
+          {/* ===== LOGO (DEPLOYMENT SAFE) ===== */}
           <div className="flex items-center gap-3">
             <img
-              src={logo}
+              src="/images/zain-logo.png"   // MUST be inside public/images
               alt="Zain Logo"
               className="h-10 sm:h-12 w-auto object-contain"
+              loading="eager"
             />
           </div>
 
-          {/* DESKTOP MENU (Laptop & Desktop) */}
+          {/* ===== DESKTOP MENU ===== */}
           <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
             <a
               href="#"
@@ -75,7 +74,7 @@ const Navbar = () => {
             </a>
           </nav>
 
-          {/* SEARCH (Hidden on Mobile, Visible Tablet+) */}
+          {/* ===== SEARCH BAR ===== */}
           <div className="hidden md:flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
             <input
               type="text"
@@ -87,7 +86,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* MOBILE MENU BUTTON (Phone & Tablet) */}
+          {/* ===== MOBILE MENU BUTTON ===== */}
           <button
             className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition"
             onClick={() => setIsOpen(!isOpen)}
@@ -129,7 +128,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* Mobile Login Button */}
+            {/* Mobile Login */}
             <button className="flex items-center justify-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:bg-blue-700 transition">
               <LogIn size={18} />
               Login

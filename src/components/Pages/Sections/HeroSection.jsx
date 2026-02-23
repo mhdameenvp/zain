@@ -1,4 +1,4 @@
-import heroImg from "../../../assets/images/hero-bg.jpg";
+const heroImg = "/images/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
@@ -17,10 +17,10 @@ const HeroSection = () => {
       {/* MAIN CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-full flex items-center">
         
-        {/* CONTENT WRAPPER (PUSHED SLIGHTLY DOWN) */}
+        {/* CONTENT WRAPPER */}
         <div className="w-full max-w-2xl flex flex-col justify-center mt-6 md:mt-10">
           
-          {/* MAIN HEADING — LESS HEAVY + MORE STYLISH */}
+          {/* MAIN HEADING */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-snug tracking-tight text-[#1f2a44]">
             Shape Your Future with
             <br className="hidden sm:block" />
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          {/* DESCRIPTION — CLEANER & SOFTER */}
+          {/* DESCRIPTION */}
           <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-xl font-normal">
             We provide personalized career counseling and admission guidance 
             for students after 10th, 12th, and graduation. Our expert mentors 
@@ -37,7 +37,7 @@ const HeroSection = () => {
             aligned with your future goals and opportunities.
           </p>
 
-          {/* BUTTONS — ELEGANT & NOT BULKY */}
+          {/* BUTTONS */}
           <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-start sm:items-center gap-3">
             
             {/* PRIMARY BUTTON */}
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </button>
           </div>
 
-          {/* SUB TEXT — VERY SUBTLE */}
+          {/* SUB TEXT */}
           <p className="mt-4 text-xs sm:text-sm text-gray-500">
             Trusted by 5000+ students for career and admission guidance
           </p>

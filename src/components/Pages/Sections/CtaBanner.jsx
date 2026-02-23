@@ -1,4 +1,4 @@
-import bannerImg from "../../../assets/images/cta.jpg";
+const bannerImg = "/images/cta.jpg";
 
 const CtaBanner = () => {
   return (
@@ -90,7 +90,7 @@ const CtaBanner = () => {
           lg:gap-12 
           items-center">
           
-          {/* ===== FORM (RESPONSIVE WIDTH) ===== */}
+          {/* ===== FORM ===== */}
           <div className="w-full max-w-md sm:max-w-lg mx-auto">
             <div className="bg-white rounded-2xl 
               p-5 sm:p-6 md:p-8 
@@ -111,7 +111,6 @@ const CtaBanner = () => {
                     focus:ring-2 focus:ring-blue-500 outline-none"
                 />
 
-                {/* Mobile Stack → Tablet 2 Columns */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="email"
@@ -155,9 +154,8 @@ const CtaBanner = () => {
             </div>
           </div>
 
-          {/* ===== CONTACT DETAILS (FULLY RESPONSIVE) ===== */}
+          {/* ===== CONTACT DETAILS ===== */}
           <div className="w-full max-w-md sm:max-w-lg mx-auto space-y-4 sm:space-y-5">
-            
             {[
               {
                 icon: "📞",
@@ -193,12 +191,10 @@ const CtaBanner = () => {
                   </div>
 
                   <div>
-                    <p className="font-semibold text-slate-800
-                      text-sm sm:text-base">
+                    <p className="font-semibold text-slate-800 text-sm sm:text-base">
                       {item.title}
                     </p>
-                    <p className="text-blue-600 font-semibold break-all
-                      text-sm sm:text-base">
+                    <p className="text-blue-600 font-semibold break-all text-sm sm:text-base">
                       {item.main}
                     </p>
                     <p className="text-slate-500 text-xs sm:text-sm">
@@ -211,7 +207,7 @@ const CtaBanner = () => {
           </div>
         </div>
 
-        {/* Bottom Note Responsive */}
+        {/* Bottom Note */}
         <p className="text-slate-600 text-center mx-auto mt-10 sm:mt-14
           text-xs sm:text-sm md:text-base
           max-w-md md:max-w-2xl">
