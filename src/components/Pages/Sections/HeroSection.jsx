@@ -1,62 +1,94 @@
-const heroImg = "/images/hero-bg.jpg";
+const heroImg = "/images/hero-bg.webp"; // keep same image
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[92vh] md:min-h-[95vh] pt-32 md:pt-36 pb-32 md:pb-40 overflow-hidden">
+    <section className="relative w-full min-h-[92vh] md:min-h-[95vh] pt-32 md:pt-36 overflow-hidden">
       
-      {/* BACKGROUND IMAGE */}
+      {/* BACKGROUND IMAGE (UNCHANGED - FULL CLEAN) */}
       <img
         src={heroImg}
         alt="Students celebrating success"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* SOFT GRADIENT OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 md:via-white/70 to-transparent"></div>
+      {/* SUBTLE DARK GRADIENT FOR TEXT READABILITY (NO WHITE MASK) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
 
-      {/* MAIN CONTAINER */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-full flex items-center">
+      {/* FUTURISTIC GREEN GLOW (AESTHETIC, NOT HEAVY) */}
+      <div className="absolute top-16 left-8 w-72 h-72 bg-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-green-400/20 rounded-full blur-3xl animate-pulse"></div>
+
+      {/* MAIN CONTENT */}
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center min-h-[80vh]">
         
-        {/* CONTENT WRAPPER */}
-        <div className="w-full max-w-2xl flex flex-col justify-center mt-6 md:mt-10">
+        {/* TEXT CONTENT */}
+        <div className="max-w-xl">
           
-          {/* MAIN HEADING */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-snug tracking-tight text-[#1f2a44]">
+          {/* HEADING (FUTURISTIC + CLEAN LIKE BROTOTYPE) */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight text-white">
             Shape Your Future with
-            <br className="hidden sm:block" />
-            <span className="text-[#2f4ea1] font-semibold">
-              Expert Educational Guidance
+            <br />
+            <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent font-bold">
+              Expert Guidance
             </span>
           </h1>
 
           {/* DESCRIPTION */}
-          <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-xl font-normal">
-            We provide personalized career counseling and admission guidance 
-            for students after 10th, 12th, and graduation. Our expert mentors 
-            help you choose the right course, university, and career path 
-            aligned with your future goals and opportunities.
+          <p className="mt-5 text-base md:text-lg text-white/90 leading-relaxed">
+            Personalized educational counseling for students after 10th, 12th grade 
+            and under graduation. We help you discover the right path to your dream career.
           </p>
 
-          {/* BUTTONS */}
-          <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          {/* FUTURISTIC BUTTONS */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
             
-            {/* PRIMARY BUTTON */}
-            <button className="w-full sm:w-auto bg-[#2f4ea1] hover:bg-[#253d80] text-white px-6 py-2.5 rounded-lg text-sm md:text-base font-medium shadow-md hover:shadow-lg transition-all duration-300">
-              Explore Courses
+            {/* PRIMARY BUTTON (GLOW EFFECT) */}
+            <button className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-emerald-400/50 hover:scale-105 transition-all duration-300">
+              Find Courses
             </button>
 
-            {/* SECONDARY BUTTON */}
-            <button className="w-full sm:w-auto bg-white text-gray-700 px-6 py-2.5 rounded-lg text-sm md:text-base font-medium border border-gray-200 shadow-sm hover:bg-gray-50 hover:shadow-md transition-all duration-300">
+            {/* SECONDARY BUTTON (GLASS LIGHT) */}
+            <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
               Book Free Consultation
             </button>
           </div>
-
-          {/* SUB TEXT */}
-          <p className="mt-4 text-xs sm:text-sm text-gray-500">
-            Trusted by 5000+ students for career and admission guidance
-          </p>
         </div>
       </div>
+
+      {/* FLOATING STATS (NO BOX BEHIND - CLEAN) */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 -mt-16 md:-mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 text-center gap-6">
+          
+          <div className="text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-emerald-400">
+              5000+
+            </h2>
+            <p className="text-white/80 mt-1 text-sm md:text-base">
+              Students Guided
+            </p>
+          </div>
+
+          <div className="text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-emerald-400">
+              98%
+            </h2>
+            <p className="text-white/80 mt-1 text-sm md:text-base">
+              Success Rate
+            </p>
+          </div>
+
+          <div className="text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-emerald-400">
+              50+
+            </h2>
+            <p className="text-white/80 mt-1 text-sm md:text-base">
+              Expert Counselors
+            </p>
+          </div>
+
+        </div>
+      </div>
+
     </section>
   );
 };

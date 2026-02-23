@@ -33,38 +33,46 @@ const CareerCoursesSection = () => {
   const nextRef = useRef(null);
 
   return (
-    <section className="w-full bg-[#dfeaf5] py-10 sm:py-14 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section className="relative w-full bg-gradient-to-b from-emerald-50 via-white to-green-50 py-12 sm:py-16 md:py-20 overflow-hidden">
+      
+      {/* FUTURISTIC GLOW BACKGROUND */}
+      <div className="absolute top-0 left-10 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-10 w-80 h-80 bg-green-200/30 rounded-full blur-3xl"></div>
 
-        {/* TITLE */}
-        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold text-[#2f4ea1] mb-8 md:mb-12">
-          Career Pathway Courses
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* TITLE (AESTHETIC GRADIENT) */}
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1f2a44] mb-10 md:mb-14">
+          Career Pathway{" "}
+          <span className="bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent">
+            Courses
+          </span>
         </h2>
 
-        {/* LEFT ARROW */}
+        {/* LEFT ARROW (GLASS FUTURISTIC) */}
         <button
           ref={prevRef}
-          className="absolute left-0 sm:-left-2 md:-left-4 top-1/2 -translate-y-1/2 z-10 
-          w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 
-          rounded-full bg-white/90 backdrop-blur 
-          shadow-md hover:shadow-lg 
+          className="absolute left-1 sm:-left-2 md:-left-4 top-1/2 -translate-y-1/2 z-10
+          w-9 h-9 md:w-11 md:h-11
+          rounded-full bg-white/70 backdrop-blur-xl border border-emerald-100
+          shadow-lg hover:shadow-emerald-200/50
           flex items-center justify-center
-          text-[#2f4ea1] hover:bg-[#2f4ea1] hover:text-white
-          transition-all duration-300"
+          text-emerald-600 hover:bg-emerald-500 hover:text-white
+          transition-all duration-300 hover:scale-110"
         >
           ‹
         </button>
 
-        {/* RIGHT ARROW */}
+        {/* RIGHT ARROW (GLASS FUTURISTIC) */}
         <button
           ref={nextRef}
-          className="absolute right-0 sm:-right-2 md:-right-4 top-1/2 -translate-y-1/2 z-10 
-          w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 
-          rounded-full bg-white/90 backdrop-blur 
-          shadow-md hover:shadow-lg 
+          className="absolute right-1 sm:-right-2 md:-right-4 top-1/2 -translate-y-1/2 z-10
+          w-9 h-9 md:w-11 md:h-11
+          rounded-full bg-white/70 backdrop-blur-xl border border-emerald-100
+          shadow-lg hover:shadow-emerald-200/50
           flex items-center justify-center
-          text-[#2f4ea1] hover:bg-[#2f4ea1] hover:text-white
-          transition-all duration-300"
+          text-emerald-600 hover:bg-emerald-500 hover:text-white
+          transition-all duration-300 hover:scale-110"
         >
           ›
         </button>
@@ -74,7 +82,7 @@ const CareerCoursesSection = () => {
           modules={[Navigation, Autoplay]}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          spaceBetween={16}
+          spaceBetween={18}
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
@@ -90,29 +98,39 @@ const CareerCoursesSection = () => {
         >
           {courses.map((course, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-
-                {/* IMAGE */}
-                <div className="w-full h-40 sm:h-44 md:h-48 lg:h-52 overflow-hidden">
+              
+              {/* FUTURISTIC GLASS CARD */}
+              <div className="group bg-white/60 backdrop-blur-xl border border-emerald-100 rounded-3xl shadow-lg overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-emerald-200/50 h-full flex flex-col">
+                
+                {/* IMAGE WITH ZOOM EFFECT */}
+                <div className="w-full h-44 sm:h-48 md:h-52 overflow-hidden">
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
 
                 {/* CONTENT */}
-                <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-[#2f4ea1] leading-snug">
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-lg md:text-xl font-semibold text-[#1f2a44] leading-snug group-hover:text-emerald-600 transition duration-300">
                     {course.title}
                   </h3>
 
-                  <button className="mt-3 text-blue-600 text-sm sm:text-base font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                    Learn More →
+                  {/* FUTURISTIC BUTTON LINK */}
+                  <button className="mt-4 text-emerald-600 text-sm md:text-base font-semibold flex items-center gap-1 group-hover:gap-3 transition-all duration-300">
+                    Learn More
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
                   </button>
+
+                  {/* BOTTOM GLOW LINE */}
+                  <div className="mt-4 h-[2px] w-0 bg-gradient-to-r from-emerald-500 to-green-500 group-hover:w-full transition-all duration-500 rounded-full"></div>
                 </div>
 
               </div>
+
             </SwiperSlide>
           ))}
         </Swiper>
