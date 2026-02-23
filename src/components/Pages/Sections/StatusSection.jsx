@@ -1,40 +1,69 @@
-const stats = [
-  { number: "5000 +", label: "Students Guided" },
-  { number: "98%", label: "Success Rate" },
-  { number: "50 +", label: "Expert Counselors" },
-];
-
 const StatusSection = () => {
   return (
-    <section className="relative z-20 -mt-20 md:-mt-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full mt-32 sm:mt-40 md:mt-48 lg:mt-56 px-4 sm:px-6 lg:px-8">
+      
+      {/* CONTAINER */}
+      <div className="max-w-7xl mx-auto">
         
-        {/* COMPACT PREMIUM CARD */}
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 py-6 md:py-8 px-6 md:px-10">
+        {/* THEME BLENDED CARD (MATCHES HERO BACKGROUND) */}
+        <div className="rounded-3xl 
+                        bg-gradient-to-r from-sky-50 via-cyan-50 to-teal-50
+                        border border-sky-100
+                        shadow-lg 
+                        px-6 sm:px-10 md:px-14 
+                        py-10 sm:py-12 md:py-14
+                        transition-all duration-300 hover:shadow-xl">
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 text-center gap-6 md:gap-8">
-            {stats.map((item, index) => (
-              <div
-                key={index}
-                className={`flex flex-col items-center justify-center ${
-                  index !== stats.length - 1
-                    ? "sm:border-r border-gray-200"
-                    : ""
-                }`}
-              >
-                {/* NUMBER */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#2f4ea1]">
-                  {item.number}
-                </h2>
+          {/* STATS GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 md:gap-12 text-center">
+            
+            {/* STAT 1 */}
+            <div className="group">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-sky-600">
+                5000+
+              </h2>
+              <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
+                Students Guided
+              </p>
 
-                {/* LABEL */}
-                <p className="mt-1 text-sm md:text-base text-gray-600 font-medium">
-                  {item.label}
-                </p>
-              </div>
-            ))}
+              {/* SUBTLE DESIGN LINE */}
+              <div className="mx-auto mt-4 h-[3px] w-12 
+                              bg-gradient-to-r from-sky-400 to-cyan-400 
+                              rounded-full transition-all duration-300 
+                              group-hover:w-20"></div>
+            </div>
+
+            {/* STAT 2 */}
+            <div className="group sm:border-x sm:border-sky-100">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cyan-600">
+                98%
+              </h2>
+              <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
+                Success Rate
+              </p>
+
+              <div className="mx-auto mt-4 h-[3px] w-12 
+                              bg-gradient-to-r from-cyan-400 to-teal-400 
+                              rounded-full transition-all duration-300 
+                              group-hover:w-20"></div>
+            </div>
+
+            {/* STAT 3 */}
+            <div className="group">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-600">
+                50+
+              </h2>
+              <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
+                Expert Counselors
+              </p>
+
+              <div className="mx-auto mt-4 h-[3px] w-12 
+                              bg-gradient-to-r from-teal-400 to-sky-400 
+                              rounded-full transition-all duration-300 
+                              group-hover:w-20"></div>
+            </div>
+
           </div>
-
         </div>
       </div>
     </section>

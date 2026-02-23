@@ -1,89 +1,70 @@
-const heroImg = "/images/hero-bg.webp"; // keep same image
+const heroImg = "/images/hero-bg.webp"; // your image
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[92vh] md:min-h-[95vh] pt-32 md:pt-36 overflow-hidden">
+    <section className="w-full bg-gradient-to-b from-white via-sky-50 to-cyan-50 pt-28 sm:pt-32 md:pt-36">
       
-      {/* BACKGROUND IMAGE (UNCHANGED - FULL CLEAN) */}
-      <img
-        src={heroImg}
-        alt="Students celebrating success"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
-      {/* SUBTLE DARK GRADIENT FOR TEXT READABILITY (NO WHITE MASK) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
-
-      {/* FUTURISTIC GREEN GLOW (AESTHETIC, NOT HEAVY) */}
-      <div className="absolute top-16 left-8 w-72 h-72 bg-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-green-400/20 rounded-full blur-3xl animate-pulse"></div>
-
-      {/* MAIN CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center min-h-[80vh]">
+      {/* MAIN CONTAINER */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
-        {/* TEXT CONTENT */}
-        <div className="max-w-xl">
+        {/* HERO LAYOUT */}
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16 min-h-[70vh]">
           
-          {/* HEADING (FUTURISTIC + CLEAN LIKE BROTOTYPE) */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight text-white">
-            Shape Your Future with
-            <br />
-            <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent font-bold">
-              Expert Guidance
-            </span>
-          </h1>
-
-          {/* DESCRIPTION */}
-          <p className="mt-5 text-base md:text-lg text-white/90 leading-relaxed">
-            Personalized educational counseling for students after 10th, 12th grade 
-            and under graduation. We help you discover the right path to your dream career.
-          </p>
-
-          {/* FUTURISTIC BUTTONS */}
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          {/* LEFT SIDE - TEXT */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
             
-            {/* PRIMARY BUTTON (GLOW EFFECT) */}
-            <button className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-emerald-400/50 hover:scale-105 transition-all duration-300">
-              Find Courses
-            </button>
+            {/* HEADING */}
+            <h1 className="font-semibold leading-[1.1] tracking-tight text-[#0f172a]
+                           text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+              Shape Your Future with
+              <br />
+              <span className="block mt-2 bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-400 bg-clip-text text-transparent font-bold">
+                Expert Guidance
+              </span>
+            </h1>
 
-            {/* SECONDARY BUTTON (GLASS LIGHT) */}
-            <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
-              Book Free Consultation
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* FLOATING STATS (NO BOX BEHIND - CLEAN) */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 -mt-16 md:-mt-20">
-        <div className="grid grid-cols-1 sm:grid-cols-3 text-center gap-6">
-          
-          <div className="text-white">
-            <h2 className="text-3xl md:text-4xl font-bold text-emerald-400">
-              5000+
-            </h2>
-            <p className="text-white/80 mt-1 text-sm md:text-base">
-              Students Guided
+            {/* DESCRIPTION */}
+            <p className="mt-5 sm:mt-6 text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Personalized educational counseling for students after 10th, 12th grade 
+              and graduation. Discover the right course, university, and career path 
+              with trusted expert guidance and professional support.
             </p>
+
+            {/* BUTTONS */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              
+              {/* FIND COURSES */}
+              <button className="w-full sm:w-auto bg-gradient-to-r from-sky-500 to-cyan-500 
+                                 text-white px-8 py-3.5 rounded-full font-semibold 
+                                 shadow-lg hover:shadow-cyan-300/50 hover:scale-105 
+                                 transition-all duration-300">
+                Find Courses
+              </button>
+
+              {/* BOOK CONSULTATION */}
+              <button className="w-full sm:w-auto border border-sky-200 
+                                 text-[#0f172a] px-8 py-3.5 rounded-full font-semibold 
+                                 bg-white hover:bg-sky-50 transition-all duration-300">
+                Book Free Consultation
+              </button>
+            </div>
           </div>
 
-          <div className="text-white">
-            <h2 className="text-3xl md:text-4xl font-bold text-emerald-400">
-              98%
-            </h2>
-            <p className="text-white/80 mt-1 text-sm md:text-base">
-              Success Rate
-            </p>
-          </div>
+          {/* RIGHT SIDE - IMAGE */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            
+            <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl">
+              
+              {/* SOFT OCEAN GLOW */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-sky-200/50 to-cyan-200/50 rounded-3xl blur-2xl"></div>
 
-          <div className="text-white">
-            <h2 className="text-3xl md:text-4xl font-bold text-emerald-400">
-              50+
-            </h2>
-            <p className="text-white/80 mt-1 text-sm md:text-base">
-              Expert Counselors
-            </p>
+              <img
+                src={heroImg}
+                alt="Students success"
+                className="relative w-full h-auto object-cover rounded-3xl shadow-2xl"
+              />
+            </div>
+
           </div>
 
         </div>
