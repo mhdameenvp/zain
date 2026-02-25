@@ -1,30 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Remove horizontal scroll globally */
-html, body {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 :root {
-  --zain-primary: #0284c7;
-  --zain-secondary: #22d3ee;
-  --zain-accent: #0ea5e9;
-  --zain-text: #0f172a;
-  --zain-bg: #f7fcff;
+  --zain-primary: #1f3f95;
+  --zain-secondary: #2a57b8;
+  --zain-muted: #f0f3f8;
+  --zain-surface: #dbe7f4;
+  --zain-text: #1e2735;
+  --zain-body: #f4f5f7;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   color: var(--zain-text);
-  background:
-    radial-gradient(1000px 500px at 12% -10%, rgba(56, 189, 248, 0.2), transparent 55%),
-    radial-gradient(900px 450px at 100% 10%, rgba(34, 211, 238, 0.15), transparent 50%),
-    var(--zain-bg);
-  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--zain-body);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
 }
 
 *,
@@ -37,104 +39,91 @@ section {
   scroll-margin-top: 120px;
 }
 
+/* account for device notches/status bars */
+@supports(padding:env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  section {
+    /* increase scroll-margin to include safe area */
+    scroll-margin-top: calc(120px + env(safe-area-inset-top));
+  }
+}
+
 img,
 video {
   max-width: 100%;
   height: auto;
 }
 
-.zain-glass {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border: 1px solid rgba(186, 230, 253, 0.7);
-}
-
-.zain-gradient-text {
-  background: linear-gradient(90deg, var(--zain-primary), var(--zain-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 @media (max-width: 768px) {
   section {
     scroll-margin-top: 98px;
   }
+
+  .landing-future h1 {
+    line-height: 1.12;
+  }
+
+  .landing-future p {
+    line-height: 1.55;
+  }
 }
 
-/* ===== Full futuristic theme skin ===== */
 .landing-future {
-  background:
-    radial-gradient(1200px 600px at 8% -10%, rgba(59, 130, 246, 0.24), transparent 58%),
-    radial-gradient(1000px 550px at 100% 0%, rgba(34, 211, 238, 0.2), transparent 54%),
-    linear-gradient(180deg, #020617 0%, #0a1226 45%, #111d33 100%);
+  background: var(--zain-body);
 }
 
 .landing-future section {
-  position: relative;
-  background:
-    radial-gradient(900px 420px at 12% 10%, rgba(14, 165, 233, 0.12), transparent 60%),
-    radial-gradient(900px 420px at 88% 90%, rgba(6, 182, 212, 0.1), transparent 60%),
-    linear-gradient(180deg, rgba(2, 6, 23, 0.96), rgba(15, 23, 42, 0.96)) !important;
+  background: transparent !important;
 }
 
 .landing-future h1,
 .landing-future h2,
 .landing-future h3 {
-  color: #e2e8f0 !important;
-  letter-spacing: -0.02em;
-  text-shadow: 0 8px 28px rgba(14, 165, 233, 0.15);
+  color: var(--zain-primary) !important;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+/* Footer-specific overrides - white text for headings */
+footer h1,
+footer h2,
+footer h3 {
+  color: #ffffff !important;
+}
+
+.landing-future h4,
+.landing-future h5,
+.landing-future h6 {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  font-weight: 600;
 }
 
 .landing-future p,
 .landing-future li,
 .landing-future span {
-  color: #dbeafe;
+  color: var(--zain-text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-weight: 400;
 }
 
-.landing-future .text-sky-600,
-.landing-future .text-sky-500,
-.landing-future .text-sky-400 {
-  color: #22d3ee !important;
+.landing-future a,
+.landing-future button {
+  font-weight: 500;
 }
 
-.landing-future .bg-gradient-to-r.from-sky-600.to-sky-400,
-.landing-future .bg-gradient-to-r.from-sky-500.to-sky-600,
-.landing-future .bg-gradient-to-r.from-sky-500.to-sky-300 {
-  background-image: linear-gradient(90deg, #38bdf8, #22d3ee, #2dd4bf) !important;
+.landing-future input,
+.landing-future textarea {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-weight: 400;
 }
 
-.landing-future [class*="bg-white/"] {
-  background: rgba(15, 23, 42, 0.58) !important;
-  border-color: rgba(56, 189, 248, 0.26) !important;
-  backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-}
-
-.landing-future [class*="text-[#0f172a]"],
-.landing-future [class*="text-black"] {
-  color: #e2e8f0 !important;
-}
-
-.landing-future [class*="text-gray-600"],
-.landing-future [class*="text-gray-500"],
-.landing-future [class*="text-gray-400"] {
-  color: #cbd5e1 !important;
-}
-
-.landing-future .testimonial-text-strong {
-  color: #f8fafc !important;
-}
-
-/* Navbar specific futuristic effects */
 .future-navbar {
-  background:
-    linear-gradient(135deg, rgba(2, 6, 23, 0.84), rgba(15, 23, 42, 0.8)),
-    radial-gradient(900px 200px at 10% 0%, rgba(14, 165, 233, 0.24), transparent 55%),
-    radial-gradient(800px 180px at 90% 100%, rgba(34, 211, 238, 0.2), transparent 55%);
-  backdrop-filter: blur(16px) saturate(145%);
-  -webkit-backdrop-filter: blur(16px) saturate(145%);
+  background: #ffffff;
   position: relative;
 }
 
@@ -145,5 +134,84 @@ video {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.85), transparent);
+  background: linear-gradient(90deg, transparent, rgba(42, 87, 184, 0.5), transparent);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 22px rgba(42, 87, 184, 0.16);
+  }
+  50% {
+    box-shadow: 0 14px 34px rgba(42, 87, 184, 0.24);
+  }
+}
+
+@keyframes gradientX {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% auto;
+  animation: gradientX 6s linear infinite;
+}
+
+/* ===========================================
+   global mobile tweaks – alignment unchanged
+   =========================================== */
+@media (max-width: 640px) {
+  /* make all containers fluid so nothing overflows */
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-4xl,
+  .max-w-3xl,
+  .container {
+    max-width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ensure media scales down without breaking layouts */
+  img,
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* lightly reduce text sizes for small screens */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 0.875rem;
+  }
 }

@@ -68,7 +68,8 @@ export default {
 
       /* ===== FONT (MODERN LOOK) ===== */
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        // include the Figma/Poppins font first, fall back to Inter and system
+        sans: ["Poppins", "Inter", "ui-sans-serif", "system-ui"],
       },
     },
   },
