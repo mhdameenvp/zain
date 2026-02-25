@@ -38,8 +38,8 @@ const Navbar = () => {
       <div className="w-full border-b border-blue-100 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-3 flex items-center justify-between">
           <div className="flex items-center group cursor-pointer">
-            <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-blue-100 bg-white shadow-lg flex items-center justify-center">
-              <img src={logo} alt="Zain" className="h-10 sm:h-11 lg:h-12 w-auto object-contain p-1 rounded-full" />
+            <div className="relative flex items-center justify-center">
+              <img src={logo} alt="Zain" className="w-32 sm:w-36 lg:w-40 h-auto object-contain" />
             </div>
           </div>
 
