@@ -4,29 +4,31 @@ const rightImg = "/images/program-3.jpg";
 
 const ProgramSection = () => {
   return (
-    <section className="relative bg-gradient-to-b from-emerald-50 via-white to-green-50 py-16 sm:py-20 md:py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-white via-sky-50 to-sky-100 py-16 sm:py-20 md:py-24 overflow-hidden">
       
-      {/* FUTURISTIC GLOW BLOBS (AESTHETIC EFFECT) */}
-      <div className="absolute top-10 left-0 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-200/30 rounded-full blur-3xl"></div>
+      {/* SOFT SKY FUTURISTIC GLOW (MATCHES ALL SECTIONS) */}
+      <div className="absolute inset-0 
+        bg-[radial-gradient(circle_at_15%_30%,rgba(56,189,248,0.14),transparent_45%)]"></div>
+      <div className="absolute inset-0 
+        bg-[radial-gradient(circle_at_85%_75%,rgba(125,211,252,0.12),transparent_50%)]"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-14 lg:gap-16 items-center">
           
-          {/* ===== LEFT TEXT CONTENT (GLASS AESTHETIC) ===== */}
+          {/* ===== LEFT TEXT CONTENT ===== */}
           <div className="max-w-2xl lg:pl-10 xl:pl-16">
             
             {/* SMALL TITLE */}
-            <p className="text-emerald-600 font-semibold mb-4 text-sm sm:text-base tracking-wider uppercase">
+            <p className="text-sky-600 font-semibold mb-4 text-sm sm:text-base tracking-wider uppercase">
               Our Program
             </p>
 
-            {/* HEADING (ADDED FOR FUTURISTIC LOOK) */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1f2a44] leading-tight">
+            {/* HEADING */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0f172a] leading-tight tracking-tight">
               Career-Focused Programs
-              <span className="block bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
                 Designed for Your Future
               </span>
             </h2>
@@ -41,39 +43,54 @@ const ProgramSection = () => {
               With personalized counselling, we help students identify courses that truly match their interests, academic strengths, aptitude, and career goals. Our counselling process includes one-on-one discussions, career assessments, and detailed course insights so that students can confidently choose a path that suits their abilities and future ambitions, rather than making decisions based on confusion, peer pressure, or limited information.
             </p>
 
-            {/* FUTURISTIC CTA BUTTON */}
-            <button className="mt-7 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-emerald-300/50 hover:scale-105 transition-all duration-300">
+            {/* CTA BUTTON (MATCHES HERO BUTTON STYLE) */}
+            <button className="mt-7 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-7 py-3 rounded-full font-semibold 
+              shadow-[0_12px_35px_rgba(56,189,248,0.35)]
+              hover:shadow-[0_20px_50px_rgba(56,189,248,0.45)]
+              hover:scale-105 transition-all duration-300">
               Explore Programs
             </button>
           </div>
 
-          {/* ===== RIGHT IMAGE GRID (FUTURISTIC GLASS STYLE) ===== */}
+          {/* ===== RIGHT IMAGE GRID ===== */}
           <div className="grid grid-cols-2 gap-4 sm:gap-5">
             
             {/* BIG TOP IMAGE */}
-            <div className="col-span-2 group overflow-hidden rounded-2xl shadow-lg bg-white/60 backdrop-blur-xl border border-emerald-100">
+            <div className="col-span-2 group overflow-hidden rounded-2xl 
+              shadow-[0_20px_50px_rgba(56,189,248,0.18)] 
+              bg-white/80 backdrop-blur-md border border-sky-100
+              transition-all duration-500 hover:-translate-y-1">
               <img
                 src={mainImg}
                 alt="Program Main"
-                className="w-full h-52 sm:h-60 md:h-64 lg:h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-52 sm:h-60 md:h-64 lg:h-[300px] object-cover 
+                transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 
             {/* BOTTOM LEFT IMAGE */}
-            <div className="group overflow-hidden rounded-2xl shadow-md bg-white/60 backdrop-blur-xl border border-emerald-100">
+            <div className="group overflow-hidden rounded-2xl 
+              shadow-md bg-white/80 backdrop-blur-md border border-sky-100
+              transition-all duration-500 hover:-translate-y-1 
+              hover:shadow-[0_15px_40px_rgba(56,189,248,0.22)]">
               <img
                 src={leftImg}
                 alt="Program Left"
-                className="w-full h-36 sm:h-44 md:h-48 lg:h-[190px] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-36 sm:h-44 md:h-48 lg:h-[190px] object-cover 
+                transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 
             {/* BOTTOM RIGHT IMAGE */}
-            <div className="group overflow-hidden rounded-2xl shadow-md bg-white/60 backdrop-blur-xl border border-emerald-100">
+            <div className="group overflow-hidden rounded-2xl 
+              shadow-md bg-white/80 backdrop-blur-md border border-sky-100
+              transition-all duration-500 hover:-translate-y-1 
+              hover:shadow-[0_15px_40px_rgba(56,189,248,0.22)]">
               <img
                 src={rightImg}
                 alt="Program Right"
-                className="w-full h-36 sm:h-44 md:h-48 lg:h-[190px] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-36 sm:h-44 md:h-48 lg:h-[190px] object-cover 
+                transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 

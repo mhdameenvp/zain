@@ -1,42 +1,33 @@
 const AboutSection = () => {
-  // Public folder image paths (Deployment Safe)
   const personImg = "/images/person.jpg";
   const campusImg = "/images/university.jpg";
-
-  const logo1 = "/images/hindustan.png";
-  const logo2 = "/images/yenepoya.png";
-  const logo3 = "/images/sjb.jpg";
-  const logo4 = "/images/srinivas.png";
+  const featuredUniversities = [
+    { name: "Yenepoya University", logo: "/images/yenepoya.png" },
+    { name: "Srinivas University", logo: "/images/srinivas.png" },
+    { name: "Hindustan Institute", logo: "/images/hindustan.png" },
+    { name: "SJB Group", logo: "/images/sjb.jpg" },
+  ];
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-white via-emerald-50 to-green-50 overflow-hidden">
-      
-      {/* FUTURISTIC GLOW BACKGROUND */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-200/30 rounded-full blur-3xl"></div>
+    <section className="relative w-full overflow-hidden bg-gradient-to-b from-white via-sky-50 to-sky-100">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(56,189,248,0.14),transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(125,211,252,0.12),transparent_50%)]" />
 
-      {/* FULL WIDTH WRAPPER (Matches Website Alignment) */}
       <div className="relative w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 md:py-16">
-
-          {/* ================= ABOUT US (GLASS CARD) ================= */}
-          <div className="w-full bg-white/70 backdrop-blur-2xl rounded-2xl shadow-xl border border-emerald-100 p-6 sm:p-8 transition-all duration-500 hover:shadow-emerald-200/40">
-            
-            <p className="text-center text-xs sm:text-sm text-emerald-600 mb-2 uppercase tracking-wider">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 md:py-20">
+          <div className="w-full bg-white/80 backdrop-blur-xl rounded-2xl shadow-[0_20px_50px_rgba(56,189,248,0.12)] border border-sky-100 p-6 sm:p-8 transition-all duration-500 hover:shadow-[0_30px_70px_rgba(56,189,248,0.18)] hover:-translate-y-1">
+            <p className="text-center text-xs sm:text-sm text-sky-600 mb-2 uppercase tracking-[0.2em] font-semibold">
               About Us
             </p>
 
-            <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold text-[#1f2a44] mb-8">
-              Your Trusted Partner in{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent">
+            <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-[#0f172a] mb-8 tracking-tight">
+              Your Trusted Partner in {" "}
+              <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
                 Education
               </span>
             </h2>
 
-            {/* Responsive Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              
-              {/* TEXT */}
               <div className="text-gray-700 text-sm sm:text-base leading-relaxed text-center md:text-left">
                 <p className="mb-3">
                   Thahir Zain is an experienced education professional with over
@@ -59,103 +50,107 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              {/* DIRECTOR IMAGE */}
               <div className="flex justify-center md:justify-end">
                 <div className="relative group">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-emerald-300 to-green-300 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="absolute -inset-3 bg-gradient-to-r from-sky-300 to-sky-200 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
                   <img
                     src={personImg}
                     alt="Director"
                     loading="lazy"
-                    className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105"
+                    className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(56,189,248,0.25)]"
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* ================= FEATURED UNIVERSITIES ================= */}
-          <div className="w-full bg-white/60 backdrop-blur-xl mt-8 rounded-2xl py-4 px-4 border border-emerald-100 shadow-lg">
-            
-            <h3 className="text-center text-sm sm:text-base font-semibold text-[#1f2a44] mb-4">
+          <div className="w-full relative overflow-hidden bg-white/80 backdrop-blur-xl mt-10 rounded-[28px] py-8 px-4 sm:px-6 border border-cyan-200/45 shadow-[0_22px_55px_rgba(56,189,248,0.2)]">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(56,189,248,0.16),transparent_42%),radial-gradient(circle_at_88%_75%,rgba(45,212,191,0.14),transparent_45%)]" />
+            <div className="pointer-events-none absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-cyan-300/25 blur-3xl" />
+
+            <p className="relative text-center text-xs sm:text-sm text-cyan-200 font-bold uppercase tracking-[0.24em] mb-2">
+              Our Trusted Network
+            </p>
+            <h3 className="relative text-center text-xl sm:text-2xl md:text-3xl font-extrabold text-cyan-100 mb-2 tracking-tight">
               Featured Universities and Premium Institutions
             </h3>
+            <p className="relative text-center text-sm sm:text-base text-sky-100 mb-6 max-w-3xl mx-auto">
+              Strong partnerships with leading universities to give you better opportunities,
+              smoother admissions, and confident career decisions.
+            </p>
 
-            {/* Logo Row */}
-            <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-6 sm:gap-10">
-              {[logo1, logo2, logo3, logo4].map((logo, index) => (
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+              {featuredUniversities.map((university) => (
                 <div
-                  key={index}
-                  className="group flex items-center justify-center 
-                             h-11 sm:h-12 px-5
-                             bg-white rounded-xl 
-                             shadow-md border border-emerald-100
-                             hover:-translate-y-1 hover:shadow-emerald-200/50 
-                             transition-all duration-300"
+                  key={university.name}
+                  className="rounded-[22px] border border-cyan-100/70 bg-white px-3 py-3 sm:py-4 shadow-[0_12px_30px_rgba(14,165,233,0.2)]"
                 >
-                  <img
-                    src={logo}
-                    alt={`University ${index + 1}`}
-                    loading="lazy"
-                    className="h-6 sm:h-7 md:h-8 object-contain opacity-90 group-hover:opacity-100 transition"
-                  />
+                  <div className="rounded-2xl border border-slate-100 bg-gradient-to-b from-white to-slate-50 p-3 min-h-[76px] flex items-center justify-center">
+                    <img
+                      src={university.logo}
+                      alt={university.name}
+                      loading="lazy"
+                      className="max-h-20 sm:max-h-24 w-auto object-contain"
+                    />
+                  </div>
+                  <h4 className="mt-2 text-center text-sm sm:text-base font-extrabold !text-slate-900 tracking-tight">
+                    {university.name}
+                  </h4>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ================= CONFUSED SECTION ================= */}
-          <div className="w-full bg-white/70 backdrop-blur-2xl rounded-2xl shadow-xl border border-emerald-100 mt-8 p-6 sm:p-8 transition-all duration-500 hover:shadow-emerald-200/40">
-            
-            <p className="text-sm text-emerald-600 mb-2 uppercase tracking-wider">
+          <div className="w-full bg-white/80 backdrop-blur-xl rounded-2xl shadow-[0_20px_50px_rgba(56,189,248,0.12)] border border-sky-100 mt-10 p-6 sm:p-8 transition-all duration-500 hover:shadow-[0_30px_70px_rgba(56,189,248,0.18)] hover:-translate-y-1">
+            <p className="text-sm text-sky-600 mb-2 uppercase tracking-[0.2em] font-semibold">
               Are You Confused?
             </p>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-[#1f2a44] mb-6 leading-snug">
-              How to Choose a Course &{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#0f172a] mb-6 leading-snug tracking-tight">
+              How to Choose a Course & {" "}
+              <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
                 University?
               </span>
             </h2>
 
-            {/* Responsive Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              
-              {/* TEXT */}
               <div className="text-gray-700 text-sm sm:text-base leading-relaxed text-center md:text-left">
                 <p className="mb-3">
-                  For over a decade, EduPath has been guiding students through one
-                  of the most important decisions of their lives – choosing the
-                  right career path. We believe that with the right guidance,
-                  every student can achieve their dreams.
+                  For more than a decade, EduPath has been helping students make
+                  one of the most important choices in their lives - finding the
+                  right career path. We are here to support you at every step, so
+                  you do not have to figure it all out alone.
+                </p>
+
+                <p className="mb-3">
+                  With the right guidance, every student has the potential to
+                  achieve their dreams. That is why we focus on understanding your
+                  strengths, interests, and goals before guiding you toward the
+                  best career options.
                 </p>
 
                 <p>
-                  Our comprehensive counseling process includes aptitude
-                  assessment, interest mapping, career exploration, college
-                  selection, and admission assistance. We work closely with
-                  students and parents to ensure informed decision-making.
+                  Our step-by-step counseling process is designed to help you with
+                  aptitude assessment, interest mapping, career exploration,
+                  college selection, and admission support. We work closely with
+                  both students and parents to make sure every decision is clear,
+                  confident, and future-focused.
                 </p>
               </div>
 
-              {/* CAMPUS IMAGE */}
               <div className="flex justify-center md:justify-end">
                 <div className="relative group">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-emerald-200 to-green-200 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition"></div>
+                  <div className="absolute -inset-3 bg-gradient-to-r from-sky-200 to-sky-100 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
                   <img
                     src={campusImg}
                     alt="University Campus"
                     loading="lazy"
-                    className="relative w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px] 
-                               h-48 sm:h-56 md:h-64 object-cover rounded-2xl shadow-lg
-                               transition-transform duration-500 group-hover:scale-105"
+                    className="relative w-full max-w-[340px] sm:max-w-[440px] md:max-w-[560px] lg:max-w-[650px] h-60 sm:h-72 md:h-80 lg:h-[26rem] object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(56,189,248,0.25)]"
                   />
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>

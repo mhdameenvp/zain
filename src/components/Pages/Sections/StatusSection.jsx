@@ -1,68 +1,35 @@
 const StatusSection = () => {
+  const stats = [
+    { value: "5000+", label: "Students Guided" },
+    { value: "98%", label: "Success Rate" },
+    { value: "50+", label: "Expert Counselors" },
+  ];
+
   return (
-    <section className="w-full mt-32 sm:mt-40 md:mt-48 lg:mt-56 px-4 sm:px-6 lg:px-8">
-      
-      {/* CONTAINER */}
-      <div className="max-w-7xl mx-auto">
-        
-        {/* THEME BLENDED CARD (MATCHES HERO BACKGROUND) */}
-        <div className="rounded-3xl 
-                        bg-gradient-to-r from-sky-50 via-cyan-50 to-teal-50
-                        border border-sky-100
-                        shadow-lg 
-                        px-6 sm:px-10 md:px-14 
-                        py-10 sm:py-12 md:py-14
-                        transition-all duration-300 hover:shadow-xl">
-          
-          {/* STATS GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 md:gap-12 text-center">
-            
-            {/* STAT 1 */}
-            <div className="group">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-sky-600">
-                5000+
-              </h2>
-              <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
-                Students Guided
-              </p>
+    <section className="relative w-full mt-6 sm:mt-8 md:mt-10 px-0 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sky-100/10 to-transparent" />
+      <div className="relative w-full py-12 sm:py-14 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="relative overflow-hidden rounded-[28px] border border-cyan-300/35 bg-slate-900/75 px-5 sm:px-8 lg:px-12 py-6 sm:py-9 backdrop-blur-xl shadow-[0_24px_70px_rgba(6,182,212,0.25)]">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(56,189,248,0.24),transparent_36%),radial-gradient(circle_at_92%_80%,rgba(45,212,191,0.2),transparent_38%)]" />
+            <div className="pointer-events-none absolute -top-16 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-cyan-300/20 blur-3xl" />
 
-              {/* SUBTLE DESIGN LINE */}
-              <div className="mx-auto mt-4 h-[3px] w-12 
-                              bg-gradient-to-r from-sky-400 to-cyan-400 
-                              rounded-full transition-all duration-300 
-                              group-hover:w-20"></div>
+            <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+              {stats.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className={`rounded-2xl border border-cyan-300/20 bg-slate-950/35 px-4 sm:px-6 py-5 sm:py-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/45 hover:shadow-[0_14px_34px_rgba(34,211,238,0.22)] ${index === 1 ? "sm:scale-[1.02]" : ""}`}
+                >
+                  <h2 className="bg-gradient-to-r from-cyan-200 via-sky-300 to-emerald-300 bg-clip-text text-transparent text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                    {stat.value}
+                  </h2>
+                  <p className="mt-2 text-sm sm:text-base md:text-lg font-semibold text-slate-100">
+                    {stat.label}
+                  </p>
+                  <div className="mx-auto mt-3 h-[3px] w-14 rounded-full bg-gradient-to-r from-cyan-300 to-sky-400" />
+                </div>
+              ))}
             </div>
-
-            {/* STAT 2 */}
-            <div className="group sm:border-x sm:border-sky-100">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cyan-600">
-                98%
-              </h2>
-              <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
-                Success Rate
-              </p>
-
-              <div className="mx-auto mt-4 h-[3px] w-12 
-                              bg-gradient-to-r from-cyan-400 to-teal-400 
-                              rounded-full transition-all duration-300 
-                              group-hover:w-20"></div>
-            </div>
-
-            {/* STAT 3 */}
-            <div className="group">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-600">
-                50+
-              </h2>
-              <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
-                Expert Counselors
-              </p>
-
-              <div className="mx-auto mt-4 h-[3px] w-12 
-                              bg-gradient-to-r from-teal-400 to-sky-400 
-                              rounded-full transition-all duration-300 
-                              group-hover:w-20"></div>
-            </div>
-
           </div>
         </div>
       </div>

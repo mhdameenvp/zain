@@ -23,23 +23,19 @@ const userImg = "/images/patel.jpg";
 
 const BlogSection = () => {
   return (
-    <section className="relative w-full bg-gradient-to-b from-white via-emerald-50 to-green-50 py-16 sm:py-20 md:py-24 overflow-hidden">
-      
-      {/* FUTURISTIC GLOW BACKGROUND */}
-      <div className="absolute top-10 left-0 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-200/30 rounded-full blur-3xl"></div>
+    <section className="relative w-full bg-gradient-to-b from-white via-sky-50 to-sky-100 py-16 sm:py-20 md:py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(56,189,248,0.14),transparent_45%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(125,211,252,0.12),transparent_50%)]"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* ===== Featured Blog Heading ===== */}
         <div className="text-center mb-14">
-          <p className="text-sm text-emerald-600 font-semibold mb-2 tracking-wider uppercase">
+          <p className="text-sm text-sky-600 font-semibold mb-2 tracking-[0.2em] uppercase">
             Featured Blog
           </p>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1f2a44] mb-4">
-            Latest Trends in Study{" "}
-            <span className="bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0f172a] mb-4 tracking-tight">
+            Latest Trends in Study {" "}
+            <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
               Industry
             </span>
           </h2>
@@ -51,71 +47,58 @@ const BlogSection = () => {
           </p>
         </div>
 
-        {/* ===== FUTURISTIC BLOG CARDS ===== */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="group bg-white/60 backdrop-blur-xl border border-emerald-100 rounded-3xl shadow-lg overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-emerald-200/50"
+              className="group bg-white/80 backdrop-blur-xl border border-sky-100 rounded-3xl shadow-[0_15px_40px_rgba(56,189,248,0.12)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(56,189,248,0.22)]"
             >
-              {/* Image with Zoom Effect */}
               <div className="w-full h-48 md:h-52 overflow-hidden">
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
-              {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg md:text-xl font-semibold text-[#1f2a44] mb-1 group-hover:text-emerald-600 transition duration-300">
+                <h3 className="text-lg md:text-xl font-semibold text-[#0f172a] mb-1 tracking-tight group-hover:text-sky-600 transition duration-300">
                   {blog.title}
                 </h3>
 
-                <p className="text-xs text-gray-400 mb-3">
-                  {blog.date}
-                </p>
+                <p className="text-xs text-gray-400 mb-3">{blog.date}</p>
 
-                <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  {blog.desc}
-                </p>
+                <p className="text-sm text-gray-600 leading-relaxed mb-5">{blog.desc}</p>
 
-                <button className="text-sm font-semibold text-emerald-600 flex items-center gap-1 group-hover:gap-3 transition-all duration-300">
+                <button className="text-sm font-semibold text-sky-600 flex items-center gap-1 group-hover:gap-3 transition-all duration-300">
                   Learn More
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    →
+                    -&gt;
                   </span>
                 </button>
 
-                {/* Bottom Glow Line */}
-                <div className="mt-4 h-[2px] w-0 bg-gradient-to-r from-emerald-500 to-green-500 group-hover:w-full transition-all duration-500 rounded-full"></div>
+                <div className="mt-4 h-[2px] w-0 bg-gradient-to-r from-sky-500 to-sky-300 group-hover:w-full transition-all duration-500 rounded-full"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* ===== SUCCESS STORIES / TESTIMONIAL ===== */}
         <div className="mt-20 md:mt-24 text-center">
-          <p className="text-sm text-emerald-600 font-semibold mb-2 uppercase tracking-wider">
+          <p className="text-sm text-sky-600 font-semibold mb-2 uppercase tracking-[0.2em]">
             Success Stories
           </p>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1f2a44] mb-10">
-            What Our{" "}
-            <span className="bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0f172a] mb-10 tracking-tight">
+            What Our {" "}
+            <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
               Students Say
             </span>
           </h2>
 
-          {/* FUTURISTIC GLASS TESTIMONIAL CARD */}
-          <div className="relative bg-white/60 backdrop-blur-2xl border border-emerald-100 rounded-3xl p-8 sm:p-10 md:p-12 max-w-3xl mx-auto shadow-xl hover:shadow-emerald-200/40 transition-all duration-500">
-            
-            {/* Glow Effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-200 to-green-200 blur-2xl opacity-30 rounded-3xl"></div>
+          <div className="relative bg-white/85 backdrop-blur-2xl border border-sky-100 rounded-3xl p-8 sm:p-10 md:p-12 max-w-3xl mx-auto shadow-[0_20px_50px_rgba(56,189,248,0.15)] hover:shadow-[0_30px_70px_rgba(56,189,248,0.25)] transition-all duration-500">
+            <div className="absolute -inset-1 bg-gradient-to-r from-sky-200 to-sky-100 blur-2xl opacity-30 rounded-3xl"></div>
 
             <div className="relative">
-              {/* Profile Image */}
               <div className="flex justify-center mb-5">
                 <img
                   src={userImg}
@@ -124,18 +107,15 @@ const BlogSection = () => {
                 />
               </div>
 
-              {/* Name */}
-              <h3 className="text-lg sm:text-xl font-semibold text-[#1f2a44]">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-900 testimonial-text-strong">
                 Ananya Patel
               </h3>
 
-              {/* Role */}
-              <p className="text-sm text-emerald-600 mb-5">
+              <p className="text-sm text-sky-700 mb-5 testimonial-text-strong">
                 MBBS Student at AIMS
               </p>
 
-              {/* Quote */}
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-xl mx-auto">
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-xl mx-auto testimonial-text-strong">
                 "I was confused between engineering and medicine after 10th.
                 The counselors helped me understand my true calling.
                 Now I'm confidently pursuing my dream career with the right guidance."
@@ -143,7 +123,6 @@ const BlogSection = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
