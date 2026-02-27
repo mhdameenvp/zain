@@ -11,11 +11,11 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0f2e72] text-white [&_p]:!text-white [&_li]:!text-white [&_a]:!text-white [&_svg]:!text-white">
+    <footer className="w-full bg-gradient-to-b from-[#1a3d7c] to-[#0f2e72] text-white [&_p]:!text-white [&_li]:!text-white [&_a]:!text-white [&_svg]:!text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-10 sm:pt-12 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="max-w-xs">
-            <img src={logo} alt="Zain Logo" className="h-14 w-auto object-contain" />
+            <img src={logo} alt="Zain Logo" className="h-16 sm:h-20 w-auto object-contain brightness-0 invert drop-shadow-lg" />
             <p className="mt-4 text-white text-sm sm:text-base leading-relaxed">
               Guiding students towards successful careers since 2013. Your trusted partner in educational counseling.
             </p>
@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-[#9baed4]/45 bg-[#0c2865]">
+      <div className="border-t border-[#9baed4]/45 bg-[#0b2560]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-5 text-sm text-white flex flex-col md:flex-row items-center justify-between gap-3">
           <p>&copy; 2026 ZAIN Education Consultancy. All rights reserved.</p>
           <div className="flex items-center gap-10">
