@@ -36,15 +36,8 @@ const AboutSection = () => {
           <h3 className="text-2xl sm:text-3xl font-semibold text-[#1f3f95] text-center">Featured Universities</h3>
           <p className="text-center text-[#2e4468] mt-2">Our partner institutions for reliable admissions support.</p>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {featuredUniversities.map((university) => (
-              <div key={university.name} className="bg-white border border-[#dbe3ef] p-4">
-                <div className="h-20 flex items-center justify-center">
-                  <img src={university.logo} alt={university.name} className="max-h-16 w-auto object-contain" />
-                </div>
-                <h4 className="text-center mt-2 text-[#1f3f95] font-semibold">{university.name}</h4>
-              </div>
-            ))}
+          <div className="mt-6 flex justify-center">
+            <img src="/images/featured-university.png" alt="Featured Universities" className="w-full max-w-4xl h-auto object-contain" />
           </div>
         </div>
 

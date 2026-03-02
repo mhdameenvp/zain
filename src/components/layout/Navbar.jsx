@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
     <header className="w-full fixed top-0 left-0 z-50">
-      <div className="hidden sm:block w-full border-b border-blue-100 bg-[#f8fbff]">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6 py-2 flex items-center justify-between text-slate-600 text-xs md:text-sm">
+        <div className="hidden sm:block w-full border-b border-blue-100 bg-[#f8fbff]">
+          <div className="max-w-7xl mx-auto px-2 lg:px-4 py-1 flex items-center justify-between text-slate-600 text-xs">
           <div className="flex items-center gap-6 lg:gap-10">
             <a href="mailto:zaineducationvly@gmail.com" className="flex items-center gap-2 hover:text-[#2a57b8] transition font-medium">
               <Mail size={14} className="text-[#2a57b8]" />
@@ -36,14 +36,14 @@ const Navbar = () => {
       </div>
 
       <div className="w-full border-b border-blue-100 bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-2 lg:px-4 py-1 flex items-center justify-between">
           <div className="flex items-center group cursor-pointer">
             <div className="relative flex items-center justify-center">
-              <img src={logo} alt="Zain" className="w-32 sm:w-36 lg:w-40 h-auto object-contain" />
+              <img src={logo} alt="Zain" className="w-12 h-auto object-contain sm:w-16 lg:w-24" />
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8 font-semibold text-slate-700">
+          <nav className="hidden lg:flex items-center gap-6 font-semibold text-slate-700 text-sm">
             {navItems.map((item, index) => (
               <a
                 key={index}
@@ -55,35 +55,35 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-2">
             <div className="flex items-center border border-blue-100 rounded-full overflow-hidden shadow-sm bg-[#f8fbff] focus-within:ring-2 focus-within:ring-[#2a57b8]/30 transition">
               <input
                 type="text"
                 placeholder="Search..."
-                className="px-4 py-2 text-sm text-slate-700 placeholder:text-slate-400 outline-none w-36 lg:w-44 bg-transparent"
+                className="px-2 py-1 text-xs sm:text-sm text-slate-700 placeholder:text-slate-400 outline-none w-20 sm:w-32 bg-transparent"
               />
-              <button className="bg-white px-3 py-2 hover:bg-blue-50 transition">
-                <Search size={18} className="text-[#2a57b8]" />
+              <button className="bg-white px-2 py-1 hover:bg-blue-50 transition">
+                <Search size={16} className="text-[#2a57b8]" />
               </button>
             </div>
 
             <a
               href="#contact"
-              className="flex items-center gap-2 bg-[#2a57b8] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#1f3f95] transition duration-300"
+              className="flex items-center gap-1 bg-[#2a57b8] text-white px-2 py-1 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#1f3f95] transition duration-300"
             >
-              <LogIn size={18} />
+              <LogIn size={16} />
               Login
             </a>
           </div>
 
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-blue-50 transition"
+            className="lg:hidden p-1 rounded-lg hover:bg-blue-50 transition"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X size={26} className="text-[#2a57b8]" />
+              <X size={18} className="text-[#2a57b8]" />
             ) : (
-              <Menu size={26} className="text-[#2a57b8]" />
+              <Menu size={18} className="text-[#2a57b8]" />
             )}
           </button>
         </div>
@@ -91,13 +91,13 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="lg:hidden border-t border-blue-100 bg-white shadow-lg">
-          <div className="flex flex-col px-6 py-6 gap-5 text-slate-700 font-semibold">
+          <div className="flex flex-col px-2 py-2 gap-2 text-slate-700 font-semibold">
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-lg hover:text-[#2a57b8] transition duration-300"
+                className="text-xs sm:text-base hover:text-[#2a57b8] transition duration-300"
               >
                 {item.label}
               </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="mt-3 bg-[#2a57b8] text-white py-3 rounded-lg text-center font-semibold hover:bg-[#1f3f95] transition duration-300"
+              className="mt-1 bg-[#2a57b8] text-white py-1 rounded-lg text-center font-semibold hover:bg-[#1f3f95] transition duration-300 text-xs sm:text-sm"
             >
               Connect Us
             </a>

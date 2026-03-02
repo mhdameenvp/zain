@@ -11,75 +11,113 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#1a3d7c] to-[#0f2e72] text-white [&_p]:!text-white [&_li]:!text-white [&_a]:!text-white [&_svg]:!text-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-10 sm:pt-12 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          <div className="max-w-xs">
-            <img src={logo} alt="Zain Logo" className="h-16 sm:h-20 w-auto object-contain brightness-0 invert drop-shadow-lg" />
-            <p className="mt-4 text-white text-sm sm:text-base leading-relaxed">
-              Guiding students towards successful careers since 2013. Your trusted partner in educational counseling.
+    <footer className="w-full bg-gradient-to-b from-[#1a3d7c] to-[#0f2e72] text-white [&_p]:!text-white [&_li]:!text-white [&_a]:!text-white [&_svg]:!text-white [&_h3]:!text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 pt-10 pb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Brand Column */}
+          <div className="col-span-2 lg:col-span-1 mb-2 lg:mb-0">
+            <img
+              src={logo}
+              alt="Zain Logo"
+              className="h-16 w-auto object-contain brightness-0 invert drop-shadow-lg -mt-3 -ml-6"
+            />
+            <p className="mt-3 text-white text-xs leading-relaxed max-w-xs hover:opacity-80 transition-opacity duration-300 cursor-default">
+              Guiding students towards successful careers since 2013. Your
+              trusted partner in educational counseling.
             </p>
 
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3 mt-4">
               {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
-                <div
+                <a
                   key={i}
-                  className="w-8 h-8 rounded-full bg-[#8d9fc6]/35 border border-[#afbdd9]/45 flex items-center justify-center hover:bg-[#a8b7d6]/45 transition cursor-pointer"
+                  href="#"
+                  className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300 cursor-pointer"
                 >
                   <Icon size={14} className="text-white" />
-                </div>
+                </a>
               ))}
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <p className="text-xl font-bold mb-6 text-white" style={{color: '#fff'}}>Quick Links</p>
-            <ul className="space-y-3 text-white text-base sm:text-lg">
-              <li className="font-semibold"><a href="#home" className="text-white" style={{color: '#fff'}}>Home</a></li>
-              <li className="font-semibold"><a href="#about" className="text-white" style={{color: '#fff'}}>About Us</a></li>
-              <li className="font-semibold"><a href="#admission" className="text-white" style={{color: '#fff'}}>Courses</a></li>
-              <li className="font-semibold"><a href="#blog" className="text-white" style={{color: '#fff'}}>Blog</a></li>
-              <li className="font-semibold"><a href="#contact" className="text-white" style={{color: '#fff'}}>Contact Us</a></li>
+            <h3 className="text-sm font-bold mb-4 text-white">
+              Quick Links
+            </h3>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Home", href: "#home" },
+                { label: "About Us", href: "#about" },
+                { label: "Courses", href: "#admission" },
+                { label: "Blog", href: "#blog" },
+                { label: "Contact Us", href: "#contact" },
+              ].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href={item.href}
+                    className="text-white text-xs font-medium hover:translate-x-1.5 hover:opacity-80 inline-block transition-all duration-300"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Our Services */}
           <div>
-            <p className="text-xl font-bold mb-6 text-white" style={{color: '#fff'}}>Our Services</p>
-            <ul className="space-y-3 text-white text-base sm:text-lg">
-              <li className="font-semibold" style={{color: '#fff'}}>Career Counseling</li>
-              <li className="font-semibold" style={{color: '#fff'}}>Aptitude Testing</li>
-              <li className="font-semibold" style={{color: '#fff'}}>College Selection</li>
-              <li className="font-semibold" style={{color: '#fff'}}>Admission Assistance</li>
-              <li className="font-semibold" style={{color: '#fff'}}>Scholarship Guidance</li>
+            <h3 className="text-sm font-bold mb-4 text-white">
+              Our Services
+            </h3>
+            <ul className="space-y-2.5">
+              {[
+                "Career Counseling",
+                "Aptitude Testing",
+                "College Selection",
+                "Admission Assistance",
+                "Scholarship Guidance",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="text-white text-xs font-medium hover:translate-x-1.5 hover:opacity-80 block transition-all duration-300 cursor-default"
+                >
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Contact Us */}
           <div>
-            <p className="text-xl font-bold mb-6 text-white" style={{color: '#fff'}}>Contact Us</p>
-            <div className="space-y-5 text-white text-base sm:text-lg">
-              <div className="flex items-start gap-3">
-                <MapPin size={17} className="mt-1 shrink-0 text-white" />
-                <p className="leading-snug text-white">KPM Arcade, Calicut Road, Valanchery, Kerala</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone size={17} className="text-white" />
-                <p className="text-white">+91 9745 600 700</p>
-              </div>
-              <div className="flex items-center gap-3 break-all">
-                <Mail size={17} className="text-white" />
-                <p className="text-white">zaineducationvly@gmail.com</p>
-              </div>
-            </div>
+            <h3 className="text-sm font-bold mb-4 text-white">
+              Contact Us
+            </h3>
+            <ul className="space-y-2.5">
+              <li className="flex items-start gap-2 hover:opacity-80 transition-opacity duration-300 cursor-default">
+                <MapPin size={14} className="text-white shrink-0 mt-0.5" />
+                <span className="text-white !text-white text-xs font-medium leading-normal">KPM Arcade, Calicut Road, Valanchery, Kerala</span>
+              </li>
+              <li className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300 cursor-default">
+                <Phone size={14} className="text-white shrink-0" />
+                <span className="text-white !text-white text-xs font-medium">+91 9745 600 700</span>
+              </li>
+              <li className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300 cursor-default">
+                <Mail size={14} className="text-white shrink-0" />
+                <span className="text-white !text-white text-xs font-medium break-all">zaineducationvly@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-[#9baed4]/45 bg-[#0b2560]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-5 text-sm text-white flex flex-col md:flex-row items-center justify-between gap-3">
-          <p>&copy; 2026 ZAIN Education Consultancy. All rights reserved.</p>
-          <div className="flex items-center gap-10">
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
+      {/* Bottom Bar */}
+      <div className="border-t border-white/15 bg-[#0b2560]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 py-4 text-[11px] text-white flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <p className="hover:opacity-80 transition-opacity duration-300">&copy; 2026 ZAIN Education Consultancy. All rights reserved.</p>
+          <div className="flex items-center gap-6 sm:gap-8">
+            <a href="#" className="text-white hover:opacity-80 transition-opacity duration-300">Privacy Policy</a>
+            <a href="#" className="text-white hover:opacity-80 transition-opacity duration-300">Terms of Service</a>
           </div>
         </div>
       </div>

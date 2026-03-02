@@ -48,18 +48,18 @@ const CtaBanner = () => {
             </form>
           </div>
 
-          <div className="flex flex-col gap-8 text-[#1f2a56]">
+          <div className="flex flex-col gap-5 text-[#1f2a56]">
             {contactCards.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#e5edff] text-[#1f3f95] flex items-center justify-center">
-                    <Icon size={22} />
+                <div key={item.title} className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-full bg-[#e5edff] text-[#1f3f95] flex items-center justify-center">
+                    <Icon size={16} />
                   </div>
                   <div>
-                    <p className="text-lg font-semibold uppercase tracking-wide text-[#1f3f95]">{item.title}</p>
-                    <p className="text-xl font-semibold text-[#2246a0] break-all">{item.main}</p>
-                    <p className="text-sm text-[#5d6b84]">{item.sub}</p>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#1f3f95]">{item.title}</p>
+                    <p className="text-base font-semibold text-[#2246a0] break-all">{item.main}</p>
+                    <p className="text-xs text-[#5d6b84]">{item.sub}</p>
                   </div>
                 </div>
               );
