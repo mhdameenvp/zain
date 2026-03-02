@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mail, MapPin, Search, LogIn, Menu, X } from "lucide-react";
-import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +35,14 @@ const Navbar = () => {
       </div>
 
       <div className="w-full border-b border-blue-100 bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4 py-2 sm:py-1 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 lg:px-6 py-1 lg:py-1.5 flex items-center justify-between">
           <div className="flex items-center group cursor-pointer">
             <div className="relative flex items-center justify-center">
-              <img src={logo} alt="Zain" className="w-14 h-auto object-contain sm:w-16 lg:w-24" />
+              <img
+                src="/images/logo-cropped.png"
+                alt="Zain"
+                className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+              />
             </div>
           </div>
 

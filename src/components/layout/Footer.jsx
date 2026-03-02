@@ -11,7 +11,7 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#1a3d7c] to-[#0f2e72] text-white [&_p]:!text-white [&_li]:!text-white [&_a]:!text-white [&_svg]:!text-white [&_h3]:!text-white">
+    <footer className="w-full bg-gradient-to-b from-[#1a3d7c] to-[#0f2e72] text-white [&_p]:!text-white [&_li]:!text-white [&_a]:!text-white [&_svg]:!text-white [&_h3]:!text-white [&_span]:!text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 pt-10 pb-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -20,11 +20,12 @@ const Footer = () => {
             <img
               src={logo}
               alt="Zain Logo"
-              className="h-16 w-auto object-contain brightness-0 invert drop-shadow-lg -mt-3 -ml-6"
+              className="h-24 w-auto object-contain brightness-0 invert drop-shadow-lg -ml-10 -mt-8"
             />
             <p className="mt-3 text-white text-xs leading-relaxed max-w-xs hover:opacity-80 transition-opacity duration-300 cursor-default">
-              Guiding students towards successful careers since 2013. Your
-              trusted partner in educational counseling.
+              Guiding students towards<br />
+              success since 2013. Your<br />
+              trusted education partner.
             </p>
 
             <div className="flex gap-3 mt-4">
@@ -95,16 +96,16 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2.5">
               <li className="flex items-start gap-2 hover:opacity-80 transition-opacity duration-300 cursor-default">
-                <MapPin size={14} className="text-white shrink-0 mt-0.5" />
-                <span className="text-white !text-white text-xs font-medium leading-normal">KPM Arcade, Calicut Road, Valanchery, Kerala</span>
+                <MapPin size={14} className="shrink-0 mt-0.5" />
+                <span className="text-xs font-medium leading-normal">KPM Arcade, Calicut Road, Valanchery, Kerala</span>
               </li>
               <li className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300 cursor-default">
-                <Phone size={14} className="text-white shrink-0" />
-                <span className="text-white !text-white text-xs font-medium">+91 9745 600 700</span>
+                <Phone size={14} className="shrink-0" />
+                <span className="text-xs font-medium">+91 9745 600 700</span>
               </li>
               <li className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300 cursor-default">
-                <Mail size={14} className="text-white shrink-0" />
-                <span className="text-white !text-white text-xs font-medium break-all">zaineducationvly@gmail.com</span>
+                <Mail size={14} className="shrink-0" />
+                <span className="text-xs font-medium break-all">zaineducationvly@gmail.com</span>
               </li>
             </ul>
           </div>
