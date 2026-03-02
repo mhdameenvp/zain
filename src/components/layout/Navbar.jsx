@@ -36,10 +36,10 @@ const Navbar = () => {
       </div>
 
       <div className="w-full border-b border-blue-100 bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-2 lg:px-4 py-1 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 py-2 sm:py-1 flex items-center justify-between">
           <div className="flex items-center group cursor-pointer">
             <div className="relative flex items-center justify-center">
-              <img src={logo} alt="Zain" className="w-12 h-auto object-contain sm:w-16 lg:w-24" />
+              <img src={logo} alt="Zain" className="w-14 h-auto object-contain sm:w-16 lg:w-24" />
             </div>
           </div>
 
@@ -77,13 +77,13 @@ const Navbar = () => {
           </div>
 
           <button
-            className="lg:hidden p-1 rounded-lg hover:bg-blue-50 transition"
+            className="lg:hidden p-2 rounded-lg hover:bg-blue-50 transition"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X size={18} className="text-[#2a57b8]" />
+              <X size={24} className="text-[#2a57b8]" />
             ) : (
-              <Menu size={18} className="text-[#2a57b8]" />
+              <Menu size={24} className="text-[#2a57b8]" />
             )}
           </button>
         </div>
@@ -91,13 +91,13 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="lg:hidden border-t border-blue-100 bg-white shadow-lg">
-          <div className="flex flex-col px-2 py-2 gap-2 text-slate-700 font-semibold">
+          <div className="flex flex-col px-4 py-4 gap-3 text-slate-700 font-semibold">
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-xs sm:text-base hover:text-[#2a57b8] transition duration-300"
+                className="text-sm sm:text-base hover:text-[#2a57b8] transition duration-300 py-1"
               >
                 {item.label}
               </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="mt-1 bg-[#2a57b8] text-white py-1 rounded-lg text-center font-semibold hover:bg-[#1f3f95] transition duration-300 text-xs sm:text-sm"
+              className="mt-2 bg-[#2a57b8] text-white py-2 rounded-lg text-center font-semibold hover:bg-[#1f3f95] transition duration-300 text-sm sm:text-base"
             >
               Connect Us
             </a>
